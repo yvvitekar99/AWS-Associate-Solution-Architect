@@ -96,4 +96,5 @@ If a user only needs access to 3 specific services, create permissions for exact
 
 ---
 
-Next [Step](IAM/1.1 IAM Users): Practice creating users and groups in the AWS console
+Next Step: Practice creating users and groups in the AWS console
+[Next](IAM/1.1 IAM Users.md)
