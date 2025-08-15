@@ -1,0 +1,42 @@
+# AWS IAM Policies - Quick Summary
+
+## Policy Inheritance
+
+### Group Policies
+- **Developers Group**: Alice, Bob, Charles inherit the same policy
+- **Operations Group**: David, Edward get different policy from developers
+- **Audit Team**: Charles and David also inherit audit policy
+
+### Individual Policies
+- **Inline Policies**: Attached directly to specific users (like Fred)
+- **Multiple Memberships**: Users can belong to multiple groups and inherit all policies
+
+## Policy Structure (JSON)
+
+### Required Components
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Effect": "Allow/Deny",
+    "Principal": "account/user/role",
+    "Action": "API calls list",
+    "Resource": "resources list"
+  }]
+}
+```
+
+### Key Elements
+- **Version**: Policy language version (always "2012-10-17")
+- **Effect**: `Allow` or `Deny` access
+- **Principal**: Who the policy applies to
+- **Action**: Which API calls are allowed/denied
+- **Resource**: Which AWS resources are affected
+
+### Optional Elements
+- **ID**: Policy identifier
+- **Sid**: Statement identifier
+- **Condition**: When the policy applies
+
+## Exam Focus
+Focus on understanding: **Effect**, **Principal**, **Action**, and **Resource** - these are the most important components for AWS exams.
